@@ -51,9 +51,16 @@ dependencies:
   google_maps_flutter: ^2.2.5
   flutter_polyline_points: ^1.0.0
   latlong2: ^0.8.1
- 
+  
+  
   pinput: ^2.2.21
   flutter_phone_direct_caller: ^2.1.1
+  contacts_service: ^0.6.3
+  permission_handler: ^10.2.0
+  flutter_google_places: ^0.3.0
+  flutter_typeahead: ^4.3.1
+  fl_chart: ^0.61.0
+  
  
 
 dev_dependencies:

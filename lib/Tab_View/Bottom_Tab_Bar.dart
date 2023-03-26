@@ -2,13 +2,10 @@
 
 import 'package:fancy_bottom_navigation/fancy_bottom_navigation.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:sos/Screens/About_Page.dart';
 import 'package:sos/Screens/Contact_Page.dart';
 import 'package:sos/Screens/Home_Page.dart';
 import 'package:sos/Screens/Location_page.dart';
 
-import '../For Authentication/Auth.dart';
 import '../Small widgets/App_Bar.dart';
 
 class Bottom_Navigator_Bar extends StatefulWidget {
@@ -23,10 +20,11 @@ class _Bottom_Navigator_BarState extends State<Bottom_Navigator_Bar> {
   @override
   void initState() {
     _tabList = [
+      {'Page': Contact_page(), 'Title': "Contact"},
       {'Page': Home_Page(), 'Title': "Home"},
       {'Page': Location_page(), 'Title': "Map"},
-      {'Page': Contact_page(), 'Title': "Contact"},
-      {'Page': About_Page(), 'Title': "About"}
+
+      // {'Page': About_Page(), 'Title': "About"}
     ];
     super.initState();
   }
@@ -66,27 +64,30 @@ class _Bottom_Navigator_BarState extends State<Bottom_Navigator_Bar> {
       //   ],
       // ),
       bottomNavigationBar: FancyBottomNavigation(
+        initialSelection: 1,
         inactiveIconColor: Colors.grey,
         activeIconColor: Colors.red,
         textColor: Colors.red,
         circleColor: Colors.transparent,
         tabs: [
           TabData(
-            iconData: Icons.home,
-            title: 'Home',
-          ),
-          TabData(
-            iconData: Icons.location_history,
-            title: 'Location',
-          ),
-          TabData(
             iconData: Icons.contacts,
             title: 'Contacts',
           ),
           TabData(
-            iconData: Icons.people,
-            title: 'About',
+            iconData: Icons.home,
+            title: 'Home',
           ),
+
+          TabData(
+            iconData: Icons.location_history,
+            title: 'Location',
+          ),
+
+          // TabData(
+          //   iconData: Icons.people,
+          //   title: 'About',
+          // ),
         ],
         onTabChangedListener: togglePage,
       ),

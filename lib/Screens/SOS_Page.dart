@@ -21,7 +21,8 @@ class _SOS_PageState extends State<SOS_Page> {
             SizedBox(height: 140),
             InkWell(
               onTap: () {
-                Navigator.of(context).pushNamed('Bottom_Navigator_Bar');
+                Navigator.of(context)
+                    .pushReplacementNamed('Bottom_Navigator_Bar');
               },
               child: Center(
                 child: Lottie.network(

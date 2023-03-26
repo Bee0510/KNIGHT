@@ -33,14 +33,9 @@ class _Home_PageState extends State<Home_Page> {
     1099,
     197
   ];
-  _callNumber() async {
-    const number = '101'; //set the number here
-    bool? res = await FlutterPhoneDirectCaller.callNumber(number);
-  }
 
   void getHelp(int index) async {
-    // await FlutterPhoneDirectCaller.callNumber(index.toString());
-    launch('tel:${PhoneNumber[index]}');
+    await FlutterPhoneDirectCaller.callNumber('${PhoneNumber[index]}');
   }
 
   void ambulance() => getHelp(0);
@@ -117,10 +112,10 @@ class _Home_PageState extends State<Home_Page> {
               InkWell(
                 borderRadius: BorderRadius.circular(200),
                 onLongPress: () async {
-                  launch('tel:+918319083737');
+                  launch('tel:+918319083735');
                 },
                 onDoubleTap: () async {
-                  launch('sms:+918319083737');
+                  await launch('sms:+918319083735');
                 },
                 child: Lottie.network(
                   'https://assets8.lottiefiles.com/packages/lf20_rops2a21.json',

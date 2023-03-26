@@ -110,7 +110,7 @@ class _MyPhonePageState extends State<MyPhonePage> {
                             borderRadius: BorderRadius.circular(10))),
                     onPressed: () async {
                       await FirebaseAuth.instance.verifyPhoneNumber(
-                        phoneNumber: '9078434144',
+                        phoneNumber: Phone,
                         verificationCompleted:
                             (PhoneAuthCredential credential) {},
                         verificationFailed: (FirebaseAuthException e) {},

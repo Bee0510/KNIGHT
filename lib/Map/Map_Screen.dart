@@ -8,6 +8,8 @@ import 'package:provider/provider.dart';
 import 'package:sos/Map/Map_Provider.dart';
 import 'package:sos/Widget/loader.dart';
 
+import '../constant/constant.dart';
+
 class Map_Screen extends StatefulWidget {
   const Map_Screen({super.key});
 
@@ -19,7 +21,7 @@ class _Map_ScreenState extends State<Map_Screen> {
   late GoogleMapController _controller;
   LatLng SourceLocation = LatLng(22.2533398, 84.9102307);
   LatLng DestinationLocation = LatLng(22.2533917, 85.9104433);
-  String google_api_key = 'AIzaSyBjC8sN5QieC0z-a3SDrAGMAyztAU_EmKs';
+
   List<LatLng> _coordinate = [];
 
   void getPolyline() async {

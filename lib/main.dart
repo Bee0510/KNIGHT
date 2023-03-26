@@ -8,9 +8,11 @@ import 'package:sos/Athentication%20Pages/Login_Phone.dart';
 import 'package:sos/Athentication%20Pages/OTP_Page.dart';
 import 'package:sos/Athentication%20Pages/wrapper.dart';
 import 'package:sos/Auth%20Models/auth_class.dart';
+import 'package:sos/Contact%20Provider/Contract_provider.dart';
 import 'package:sos/For%20Authentication/Auth.dart';
 import 'package:sos/Map/Map_Provider.dart';
 import 'package:sos/Map/Map_Screen.dart';
+import 'package:sos/Screens/Contact_Page.dart';
 import 'package:sos/Screens/Home_Page.dart';
 import 'package:sos/Screens/Profile_Page.dart';
 import 'package:sos/Tab_View/Bottom_Tab_Bar.dart';
@@ -56,7 +58,7 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
         ChangeNotifierProvider(
           create: (context) => LocationProvider(),
           child: Map_Screen(),
-        )
+        ),
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
